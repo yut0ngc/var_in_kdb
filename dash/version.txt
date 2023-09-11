@@ -1,0 +1,7 @@
+#Wed, 23 Aug 2023 08:51:25 +0000
+
+product.name=HTML5DashboardsLite
+build.guid=0dc1743c-c30c-2b17-f683-bdd2618496cc
+build.time=230823085124
+
+svn.revision=${svn.revision}

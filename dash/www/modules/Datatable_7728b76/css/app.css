@@ -1,0 +1,678 @@
+/* gk: MIXINS */
+/* PALLETE */
+/* Kx-dark theme colour schema */
+/* Kx-light theme colour schema */
+.data-table {
+  color: #efefef;
+  color: #efefef;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*.table-tools has been moved to _pnlButtons.scss*/
+}
+.data-table > .table-body {
+  overflow: visible;
+}
+.data-table > .table-body > .scrollfix {
+  overflow: auto;
+}
+.data-table > .table-body > .scrollfix > .table-content {
+  overflow: visible;
+}
+.data-table > .table-body > .scrollfix > .table-content > .table-row {
+  overflow: visible;
+}
+.data-table > .table-body > .scrollfix > .table-content > .table-row.expandedSummaryDefaultStyle > div:not(.data-table) {
+  font-weight: bold;
+  border-bottom: double 3px;
+}
+.data-table > .table-body > .scrollfix > .table-content > .table-row.expandedSummaryDefaultStyle > div:not(.data-table):empty:not(:empty ~ :empty):before {
+  content: "Total :";
+}
+.data-table > .table-body > .scrollfix > .table-content > .table-row.expandedSummaryDefaultStyle > div:not(.data-table):empty:not(:empty ~ :empty) {
+  font-weight: bold;
+  border-bottom: double 3px;
+}
+.data-table > .table-header {
+  overflow: hidden !important;
+}
+.data-table > .table-header > .table-row {
+  overflow: visible;
+}
+.data-table .data-table > .table-body {
+  top: 0;
+  overflow: visible;
+}
+.data-table .data-table > .table-body .scrollfix {
+  overflow: visible;
+}
+.data-table .data-table > .table-body .scrollfix .table-content {
+  overflow: visible;
+}
+.data-table .expndbl {
+  z-index: 10;
+}
+.data-table .expndbl:after {
+  content: "\f0fe";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: absolute;
+  font-size: 12px;
+  line-height: 12px;
+  top: 50%;
+  left: 5px;
+  margin: -6px 0 0 0;
+  z-index: 1;
+  opacity: 0.8;
+}
+.data-table .expndbl.expanded:after {
+  content: "\f146";
+}
+.data-table .expndbl.expanding:after {
+  content: "\f110";
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  -moz-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
+}
+.data-table .expndbl:hover:after {
+  opacity: 1;
+}
+.data-table.has-tools.show-filters > .table-header .table-row input.filter {
+  display: block;
+}
+.data-table.has-tools.show-filters > .table-header .table-row input.filter:disabled {
+  display: none;
+}
+.data-table.has-tools.show-filters > .table-body {
+  top: 98px;
+}
+.data-table.has-footer > .table-body {
+  bottom: 31px;
+}
+.data-table.has-footer > .table-footer {
+  display: block;
+}
+.data-table.has-tools > .table-header {
+  top: 36px;
+}
+.data-table.has-tools > .table-body {
+  top: 67px;
+}
+.data-table .table-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: auto;
+  overflow: visible;
+}
+.data-table .table-header .table-row {
+  background: #282828;
+  box-sizing: border-box;
+  position: relative;
+}
+.data-table .table-header .table-row > .th {
+  padding: 0;
+  border-width: 0;
+  overflow: visible;
+  border-left: 1px solid transparent;
+}
+.data-table .table-header .table-row > .th .linkContainer {
+  position: relative;
+}
+.data-table .table-header .table-row > .th .linkContainer a {
+  padding: 0 0 0 0;
+  color: #fff;
+}
+.data-table .table-header .table-row > .th .linkContainer a:hover {
+  color: #fff;
+}
+.data-table .table-header .table-row > .th .linkContainer a.expndbl {
+  position: absolute;
+  height: 32px;
+  width: 28px;
+  top: 50%;
+  margin-top: -16px;
+  left: 0;
+  box-shadow: none;
+}
+.data-table .table-header .table-row > .th:last-child .thi {
+  right: 1px;
+}
+.data-table .table-header .table-row .thi {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
+  height: auto;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.data-table .table-header .table-row .thi a {
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
+.data-table .table-header .table-row .thi a:hover {
+  border-color: #6e6e6e;
+}
+.data-table .table-header .table-row .thi .ui-selectmenu-text {
+  color: #D0D0D0;
+}
+.data-table .table-header .table-row .thi *:focus {
+  outline: 0;
+  color: #ffffff;
+}
+.data-table .table-header .table-row .thi input.filter {
+  display: none;
+  background: #424242;
+  border: 1px solid #6d6d6d;
+  width: 100%;
+  height: 25px;
+  padding: 0 1.5em 0 2px;
+  font-size: 12px;
+  box-sizing: border-box;
+  margin-top: 1px;
+  color: #ffffff;
+}
+.data-table .table-header .table-row .thi .clear-filter {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0em;
+  bottom: 25%;
+  margin-bottom: -11px;
+  padding: 0.5em;
+  font-size: 11px;
+}
+.data-table .table-header .table-row .thi.filter-active .clear-filter {
+  display: inline-block;
+}
+.data-table .table-header.has-scrollbar {
+  margin-right: 17px;
+}
+.data-table .table-body {
+  position: absolute;
+  top: 31px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 13px;
+  -webkit-touch-callout: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+.data-table .negative {
+  background: red;
+}
+.data-table .table-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 31px;
+  line-height: 31px;
+  font-size: 13px;
+  display: none;
+  overflow: hidden;
+}
+.data-table .table-footer .table-row {
+  height: 31px;
+  box-sizing: border-box;
+  position: relative;
+}
+.data-table .table-footer.has-scrollbar {
+  margin-right: 17px;
+}
+.data-table .bar {
+  fill: steelblue;
+}
+.data-table.dlgBasicPopup {
+  position: relative;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+}
+.data-table.dlgBasicPopup .dlgCsvExport input, .data-table.dlgBasicPopup .dlgExcelExport input {
+  margin-top: 0.75em;
+  padding: 0.25em;
+  border-width: 1px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.data-table div.scrollfix {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.data-table .ui-icon.ui-icon-arrowreturn-1-e {
+  background-image: url("../img/flip.png");
+  background-position: 0 0;
+  width: 18px;
+  height: 10px;
+  margin: 2px 0 0 -10px;
+  position: absolute;
+}
+.data-table .table-row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+.data-table .table-row .percentageFormatter {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  height: 20px;
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.data-table .table-row .percentageFormatter p {
+  display: block;
+  margin-top: 0;
+  float: left;
+  overflow: hidden;
+  max-width: 100%;
+}
+.data-table .table-row .percentageFormatter span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  line-height: 18px;
+  font-size: 0.8em;
+}
+.data-table .table-row > div {
+  padding: 0 2px;
+  cursor: default;
+  position: absolute;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 100%;
+  text-align: center;
+  border-left: 1px solid #202020;
+  border-bottom: 1px solid #202020;
+  box-sizing: border-box;
+  margin-left: -1px;
+}
+.data-table .table-row > div.highlightRulesActive {
+  padding: 0px;
+  height: 100%;
+  box-sizing: border-box;
+}
+.data-table .table-row > div > .highlightDiv {
+  position: relative;
+  padding: 0 2px;
+  pointer-events: none;
+  z-index: 0;
+}
+.data-table .table-row > div > .highlightDiv > .cellIconsLeft {
+  position: absolute;
+  left: 7px;
+}
+.data-table .table-row > div.highlightRulesActive > .highlightDiv > .cellIconsRight {
+  position: absolute;
+  right: 7px;
+}
+.data-table .table-row > div .cellIcons {
+  padding: 3px;
+}
+.data-table .table-row > div.highlightRulesActive > .highlightDiv .Fill_Left-to-Right, .data-table .table-row > div.highlightRulesActive > .highlightDiv .Fill_Right-to-Left {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  box-sizing: border-box;
+  z-index: -1;
+}
+.data-table .table-row > div.highlightRulesActive > .highlightDiv .Fill_Left-to-Right {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+.data-table .table-row > div.highlightRulesActive > .highlightDiv .Fill_Right-to-Left {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.data-table .table-row > div.expndbl {
+  padding-left: 18px;
+}
+.data-table .table-row > div span.sort {
+  display: inline-block;
+  margin-left: 6px;
+  font-family: "gklineicoregular";
+}
+.data-table .table-row > div.th a {
+  display: block;
+  line-height: 31px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.data-table .table-row > div i.fa-caret-up, .data-table .table-row > div i.fa-caret-down {
+  float: left;
+  margin-right: -10px;
+  margin: 10px -20px 0 10px;
+}
+.data-table .table-row > div.data-table {
+  box-sizing: border-box;
+  height: auto;
+  overflow: visible;
+  border-bottom: 1px solid transparent;
+}
+.data-table .table-row > div.data-table .table-row > div:first-child {
+  border-left: none;
+}
+.data-table .table-row > .left {
+  text-align: left;
+}
+.data-table .table-row.table-sub-row {
+  height: 0;
+  overflow: hidden;
+  top: 31px;
+  left: 43px;
+  padding: 0;
+  border-left: 0 none;
+}
+.data-table .table-row.table-sub-row > div {
+  border: 0;
+  border-top: 1px solid #202020;
+  padding: 0;
+}
+.data-table .table-row.table-sub-row > div {
+  border-top-color: #202020;
+}
+.data-table.animate .table-row {
+  -webkit-transition: top 0.3s, height 0.3s, background-color 0.2s linear, color 0.2ms linear;
+  -moz-transition: top 0.3s, height 0.3s, background-color 0.2s linear, color 0.2ms linear;
+  transition: top 0.3s, height 0.3s, background-color 0.2s linear, color 0.2ms linear;
+}
+.data-table.animate .table-row > div {
+  -webkit-transition: left 0.2s, width 0.2s, right 0.2s;
+  -moz-transition: left 0.2s, width 0.2s, right 0.2s;
+  transition: left 0.2s, width 0.2s, right 0.2s;
+}
+.data-table.animate .table-row.table-sub-row {
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  transition: height 0.2s;
+}
+.data-table.animate .table-row .table-body {
+  -webkit-transition: top 0.2s;
+  -moz-transition: top 0.2s;
+  transition: top 0.2s;
+}
+.data-table .table-tools a {
+  color: #CCC;
+}
+.data-table .table-tools a:hover {
+  color: #fff;
+}
+
+.Dark.app-div .data-table > .table-tools {
+  display: none;
+}
+.Dark.app-div .data-table.has-tools > .table-tools {
+  display: block;
+}
+.Dark.app-div .table-tools {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 36px;
+  height: 36px;
+  box-sizing: border-box;
+  font-size: 13px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.Dark.app-div .table-tools > a {
+  padding: 0 1em;
+  color: #CCC;
+  cursor: pointer;
+  line-height: 36px;
+  display: inline-block;
+}
+.Dark.app-div .table-tools > a:hover {
+  color: #00AEFF;
+}
+.Dark.app-div .table-tools span.lnksExport {
+  padding: 0 1em;
+  /* dividers */
+}
+.Dark.app-div .table-tools span.lnksExport.link-disabled {
+  display: none;
+}
+.Dark.app-div .table-tools span.lnksExport a.lnkCsvExport,
+.Dark.app-div .table-tools span.lnksExport a.lnkExcelExport,
+.Dark.app-div .table-tools span.lnksExport a.lnkFullExport {
+  line-height: 36px;
+  color: #CCC;
+}
+.Dark.app-div .table-tools span.lnksExport a.lnkCsvExport:hover,
+.Dark.app-div .table-tools span.lnksExport a.lnkExcelExport:hover,
+.Dark.app-div .table-tools span.lnksExport a.lnkFullExport:hover {
+  color: #00AEFF;
+  cursor: pointer;
+}
+.Dark.app-div .table-tools span.lnksExport a.lnkCsvExport .export-spinner,
+.Dark.app-div .table-tools span.lnksExport a.lnkExcelExport .export-spinner,
+.Dark.app-div .table-tools span.lnksExport a.lnkFullExport .export-spinner {
+  position: absolute;
+  right: 2px;
+  top: 4px;
+  font-size: 10px;
+}
+.Dark.app-div .table-tools span.lnksExport a.lnkCsvExport.export-in-progress,
+.Dark.app-div .table-tools span.lnksExport a.lnkExcelExport.export-in-progress,
+.Dark.app-div .table-tools span.lnksExport a.lnkFullExport.export-in-progress {
+  pointer-events: none;
+}
+.Dark.app-div .table-tools span.lnksExport a.lnkCsvExport.link-disabled,
+.Dark.app-div .table-tools span.lnksExport a.lnkExcelExport.link-disabled,
+.Dark.app-div .table-tools span.lnksExport a.lnkFullExport.link-disabled {
+  display: none;
+}
+.Dark.app-div .table-tools span.lnksExport a.lnkCsvExport.events-disabled,
+.Dark.app-div .table-tools span.lnksExport a.lnkExcelExport.events-disabled,
+.Dark.app-div .table-tools span.lnksExport a.lnkFullExport.events-disabled {
+  color: #6f6f6f;
+}
+.Dark.app-div .table-tools span.lnksExport a:not(.link-disabled) ~ a:not(.link-disabled):before {
+  display: inline-block;
+  content: " | ";
+  color: #CCC;
+  padding: 0 0.4em 0 0.2em;
+}
+.Dark.app-div .table-row .percentageFormatter {
+  border-color: #a0a0a0;
+  background-color: #383838;
+}
+.Dark.app-div .table-row .percentageFormatter p {
+  background-color: #606060;
+}
+.Dark.app-div .table-row .percentageFormatter span {
+  text-shadow: 1px 1px #434343;
+  box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.8);
+}
+.Dark.app-div .table-row.expandedSummaryDefaultStyle > div:not(.data-table) {
+  background-color: #424242 !important;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .Dark.app-div .table-header.has-scrollbar, .Dark.app-div .table-footer.has-scrollbar {
+    margin-right: 16px;
+  }
+}
+
+.Light.app-div {
+  background-color: #f8f8f8;
+  color: #101010;
+}
+.Light.app-div .data-table > .table-tools {
+  display: none;
+}
+.Light.app-div .data-table.has-tools > .table-tools {
+  display: block;
+}
+.Light.app-div .table-tools {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 36px;
+  height: 36px;
+  box-sizing: border-box;
+  font-size: 13px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.Light.app-div .table-tools > a {
+  padding: 0 1em;
+  color: #000;
+  cursor: pointer;
+  line-height: 36px;
+  display: inline-block;
+}
+.Light.app-div .table-tools > a:hover {
+  color: #00AEFF;
+}
+.Light.app-div .table-tools span.lnksExport {
+  padding: 0 1em;
+  /* dividers */
+}
+.Light.app-div .table-tools span.lnksExport.link-disabled {
+  display: none;
+}
+.Light.app-div .table-tools span.lnksExport a.lnkCsvExport,
+.Light.app-div .table-tools span.lnksExport a.lnkExcelExport,
+.Light.app-div .table-tools span.lnksExport a.lnkFullExport {
+  line-height: 36px;
+  color: #000;
+}
+.Light.app-div .table-tools span.lnksExport a.lnkCsvExport:hover,
+.Light.app-div .table-tools span.lnksExport a.lnkExcelExport:hover,
+.Light.app-div .table-tools span.lnksExport a.lnkFullExport:hover {
+  color: #00AEFF;
+  cursor: pointer;
+}
+.Light.app-div .table-tools span.lnksExport a.lnkCsvExport .export-spinner,
+.Light.app-div .table-tools span.lnksExport a.lnkExcelExport .export-spinner,
+.Light.app-div .table-tools span.lnksExport a.lnkFullExport .export-spinner {
+  position: absolute;
+  right: 2px;
+  top: 4px;
+  font-size: 10px;
+}
+.Light.app-div .table-tools span.lnksExport a.lnkCsvExport.export-in-progress,
+.Light.app-div .table-tools span.lnksExport a.lnkExcelExport.export-in-progress,
+.Light.app-div .table-tools span.lnksExport a.lnkFullExport.export-in-progress {
+  pointer-events: none;
+}
+.Light.app-div .table-tools span.lnksExport a.lnkCsvExport.link-disabled,
+.Light.app-div .table-tools span.lnksExport a.lnkExcelExport.link-disabled,
+.Light.app-div .table-tools span.lnksExport a.lnkFullExport.link-disabled {
+  display: none;
+}
+.Light.app-div .table-tools span.lnksExport a.lnkCsvExport.events-disabled,
+.Light.app-div .table-tools span.lnksExport a.lnkExcelExport.events-disabled,
+.Light.app-div .table-tools span.lnksExport a.lnkFullExport.events-disabled {
+  color: #b1b1b1;
+}
+.Light.app-div .table-tools span.lnksExport a:not(.link-disabled) ~ a:not(.link-disabled):before {
+  display: inline-block;
+  content: " | ";
+  color: #000;
+  padding: 0 0.4em 0 0.2em;
+}
+.Light.app-div .data-table {
+  color: #101010;
+}
+.Light.app-div .table-row {
+  border-bottom-color: silver;
+}
+.Light.app-div .table-row > div {
+  border-left-color: #c0c0c0;
+  border-bottom-color: #c0c0c0;
+  /*box-sizing: border-box;*/
+}
+.Light.app-div .table-row > div.data-table {
+  border-bottom: 0px;
+}
+.Light.app-div .table-row > div.th .linkContainer a {
+  color: #000;
+}
+.Light.app-div .table-row > div.th .linkContainer a:hover {
+  color: #000;
+}
+.Light.app-div .table-row > div .thi a {
+  box-shadow: inset 0px 0px 1px 0px rgba(255, 255, 255, 0.3);
+  border-color: #e4e4e4;
+}
+.Light.app-div .table-row > div .thi a:hover {
+  border-color: #9b9b9b;
+}
+.Light.app-div .table-row > div .thi .ui-selectmenu-text {
+  color: #D0D0D0;
+}
+.Light.app-div .table-row > div .thi *:focus {
+  outline: 0;
+  color: #000;
+}
+.Light.app-div .table-row > div .thi input.filter {
+  background: #fff;
+  border-color: #ababab;
+  color: #000;
+}
+.Light.app-div .table-row.table-sub-row > div {
+  border-top-color: #c0c0c0;
+}
+.Light.app-div .table-row .percentageFormatter {
+  border-color: #707070;
+  background-color: #dddddd;
+}
+.Light.app-div .table-row .percentageFormatter p {
+  background-color: #a8a8a8;
+}
+.Light.app-div .table-row .percentageFormatter span {
+  text-shadow: 1px 1px #c0c0c0;
+  box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.8);
+}
+.Light.app-div .table-row.expandedSummaryDefaultStyle > div:not(.data-table) {
+  background-color: rgb(220, 219, 219) !important;
+}
+.Light.app-div .table-header .table-row {
+  background-color: silver;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIl9nbG9iYWwuc2NzcyIsImFwcC5zY3NzIiwiYm91cmJvbi9hZGRvbnMvX3ByZWZpeGVyLnNjc3MiLCJfcG5sQnV0dG9ucy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0FBZ0JBO0FBaUJBO0FBRUE7QUNuQ0E7RUFDSSxPRGtCUztFQ2hCVDtFQUNBO0VBRUE7RUFDQTtFQUNBO0VBQ0E7RUFDQTtBQXNHQTs7QUFwR0E7RUFDSTs7QUFDQTtFQUNJOztBQUVBO0VBQ0k7O0FBRUE7RUFDSTs7QUFFSjtFQUNJO0VBQ0E7O0FBR0o7RUFDSTs7QUFHSjtFQUNJO0VBQ0E7O0FBUWhCO0VBQ0k7O0FBRUE7RUFDSTs7QUFLUjtFQUNJO0VBQ0E7O0FBRUE7RUFDSTs7QUFFQTtFQUNJOztBQUtaO0VBQ0k7O0FBQ0E7RUFDSTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFHSjtFQUNJOztBQUdKO0VBQ0k7RUN0REosbUJEdURJO0VDbkRKLGdCRG1ESTtFQ3ZDSixXRHVDSTs7QUFHSjtFQUNJOztBQU1BO0VBQ0k7O0FBRUE7RUFDSTs7QUFLWjtFQUNJOztBQU9KO0VBQ0ksUUR2R0E7O0FDMEdKO0VBQ0k7O0FBS0o7RUFDSSxLRGxIRTs7QUNxSE47RUFDSTs7QUFJUjtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0c7RUFDQTs7QUFFQTtFQUNJO0VBQ0E7RUFDQTs7QUFFQTtFQUNJO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0k7O0FBRUE7RUFDSTtFQUNBOztBQUVBO0VBQ0k7O0FBSVI7RUFDSTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFJUjtFQUNJOztBQUlSO0VEbkxYO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQ2tMZTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDSTtFQUNBOztBQUVBO0VBQ0k7O0FBSVI7RUFDSTs7QUFHSjtF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 */
